@@ -1,0 +1,74 @@
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  justify-content: space-between;
+  z-index: 1;
+  border-right: 1px solid rgb(20,20,20);
+  background-color: black;
+  
+}
+.sidenav__logo {
+  width: 120px;
+  margin: 25px;
+}
+.sideNav_Buttons {
+  display: flex;
+  margin: 5px 25px 25px 5px;
+  flex-direction: column;
+}
+.sideNav_ButtonsMore {
+    display: flex;
+    margin: 5px 25px 25px 5px;
+    flex-direction: column;
+  }
+.sideNav_Button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: 0;
+  color: whitesmoke;
+  border: 0;
+  margin: 5px 10px 5px 10px;
+  padding: 5px 15px 10px 15px;
+  border-radius: 10px;
+}
+.sideNav_Button:hover {
+  cursor: pointer;
+  background-color: rgb(20, 20, 20);
+}
+.sideNav_Button > span {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-left: 10px;
+}
+.span_title {
+}
+.span_icon:hover {
+  width: 50px;
+  zoom: normal;
+}
+
+.sideNav_ButtonMore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: 0;
+  color: whitesmoke;
+  border: 0;
+  margin: 5px 10px 5px 10px;
+  padding: 5px 15px 10px 15px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 5px;
+}
+.sideNav_ButtonMore > span {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-left: 10px;
+}
+.sideNav_ButtonMore:hover {
+  cursor: pointer;
+  background-color: rgb(20, 20, 20);
+}

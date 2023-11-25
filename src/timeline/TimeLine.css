@@ -1,0 +1,20 @@
+.timeline {
+    display: flex;
+    flex-direction: row;
+  }
+  .Stories_header{
+    display: flex;
+    flex-direction: row;
+    width: 650px;
+    margin: 30px 5px 50px 5px;
+  }
+  .timeline__left {
+    flex: 0.7;
+  }
+  
+  .timeline__right {
+    flex: 0.3;
+  }
+  
+  .timeline__posts {
+  }
