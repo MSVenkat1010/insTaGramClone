@@ -4,7 +4,8 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-import StoryView from "./timeline/Stories/StoryView/StoryView";
+import StoryView from "./timeline/StoryView/StoryView.js";
+import UserLogin from "./userLogin/UserLogin"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,9 +15,11 @@ root.render(
         <Route path="/dashboard" element={<App />} />
         <Route path="/" element={<App />} />
         <Route path="/stories" element={<StoryView />} />
+        <Route path="/login" element={<UserLogin/>} />
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>
+</React.StrictMode>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

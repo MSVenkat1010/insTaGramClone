@@ -1,7 +1,7 @@
 import React from "react";
 import "./TimeLine.css";
 import Suggestion from "../suggestion/Suggestion";
-import Stories from "./Stories/Stories";
+import Stories from "./StoryView/Stories/Stories"
 import Posts from "./Posts/Posts";
 
 function TimeLine() {
@@ -87,18 +87,11 @@ function TimeLine() {
         <div>
           {/* Posts */}
           <div className="Stories_header">
-            <Stories
-              userName={"testFG"}
-              proPic={
-                "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
-              }
-            />
-            {stories.map((item) => {
-              {
-                console.log("iteminMain", item, item.user, item.proPic);
-              }
+            {stories.map((item,index) => {
               return (
                 <Stories
+                  index={index}
+                  storyView={false}
                   key={item.user}
                   proPic={item.proPic}
                   userName={item.user}
