@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import StoryView from "./timeline/StoryView/StoryView.js";
 import UserLogin from "./userLogin/UserLogin"
+import Register from "./userLogin/Register/Register.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +17,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/stories" element={<StoryView />} />
         <Route path="/login" element={<UserLogin/>} />
+        <Route path="/register" element={<Register/>} />
       </Routes>
     </BrowserRouter>
 </React.StrictMode>
