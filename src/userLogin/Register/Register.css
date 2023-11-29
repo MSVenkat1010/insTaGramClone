@@ -1,0 +1,96 @@
+.userLogin{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15vh;
+    background-color: white;
+    width: 100%;
+    min-height: 100%;
+}
+.forgotPassword{
+    color: rgb(4,40,87);
+}
+.bannerLogin{
+   
+}
+.credLogin{
+    border: 1px solid rgb(20, 20, 20);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.bannerLogin{
+    padding: 10px; 
+}
+.bannerLogin,
+.credLogin{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    max-width: 350px;
+    background-color: rgb(255,255,255);
+}
+.userDetails{
+    border: 0;
+    color: rgb(var(black));
+    font: inherit;
+    margin: 10px !important;
+    padding: 10px !important;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-overflow: ellipsis;
+    transform-origin: left;
+    white-space: nowrap;
+}
+
+.orElement{
+    display: flex;
+    flex-direction: row;
+    width: 30ch;
+    align-items: center;
+    justify-content:center;
+}
+
+.orElement hr{
+
+    height: 1px;
+    flex-shrink: 1;
+    position: relative;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 5px;
+    background-color: white,;
+    
+
+}
+
+
+.instagram_logo{
+    width: 120px;
+    margin: 25px;
+
+;}
+.instagram_png{
+width: 100%;
+}
+
+.full-screen-div {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Set your desired background color */
+    position: fixed; /* or position: absolute; */
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
