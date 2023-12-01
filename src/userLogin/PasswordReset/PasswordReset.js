@@ -1,43 +1,35 @@
 import React, { useEffect, useRef } from "react";
-import "./userLogin.css";
-import insta_Png from ".././Resources/Instagram_SideBar.png"
+import "./PasswordReset.css";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 
 import TextField from "@mui/material/TextField";
 import { Button, FormControl } from "@mui/material";
 
-function UserLogin() {
+function PasswordReset() {
   const [showPassword, setShowPassword] = React.useState(false);
+  const [showRePassword, setShowRePassword] = React.useState(false);
   const [userDetails, setUserDetails] = React.useState({
-    userName: "",
-    passWord: "",
+    email:"",
+    userName:"",
+    passWord:"",
+    rePassWord:""
   });
 
-  const handleClickShowPassword = () => {
-    setShowPassword((show) => !show);
-  };
-  const handleUserLogin =(event,field) => {
+  const handleRegister =(event,field) => {
 
-    if ((field === "userName" || field === "passWord") ){
+    if ((field === "userName" || field === "passWord" ||field === "rePassWord" )) {
       if(event.target.value.length <= 10){setUserDetails({ ...userDetails, [field]: event.target.value });}
+    }else{
+      setUserDetails({ ...userDetails, [field]: event.target.value });
     }
   };
- 
 
-  const handleMouseDownPassword = (
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => {
+
+  const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
   };
   return (
-    <div className="userLogin full-screen-div" /* style={{ color: "white" }} */>
-      <div className="bannerLogin">
-      <img
-          className="instagram_png"
-          src={insta_Png}
-          alt="Instagram Logo"
-        />
-      </div>
+    <div className="PasswordReset full-screen-div" style={{ color: "white" }}>
       <div className="credLogin">
         <img
           className="instagram_logo"
@@ -45,25 +37,26 @@ function UserLogin() {
           alt="Instagram Logo"
         />
         <TextField
-          label="user Name"
+          label="User name"
           value={userDetails.userName}
-          onChange={(event)=>{handleUserLogin(event,"userName")}}
-          id="outlined-start-adornment"
+         onChange={(event)=>{handleRegister(event,"userName")}}
+          type={"text"}
+          id="userName"
           sx={{ m: 1, width: "25ch" }}
           placeholder="user name"
         />
         <TextField
           label="password"
           value={userDetails.passWord}
-          id="test"
+          id="password"
           type={showPassword ? "text" : "password"}
           placeholder="password"
           sx={{ m: 1, width: "25ch" }}
-          onChange={(event)=>{handleUserLogin(event,"passWord")}}
+         onChange={(event)=>{handleRegister(event,"passWord")}}
           InputProps={{
             endAdornment: (
               <span
-                onClick={handleClickShowPassword}
+                onClick={()=>{setShowPassword(!showPassword)}}
                 onMouseDown={handleMouseDownPassword}
               >
                 <RemoveRedEyeOutlinedIcon />
@@ -71,6 +64,26 @@ function UserLogin() {
             ),
           }}
         />
+                <TextField
+          label="re-enter password"
+          value={userDetails.rePassWord}
+          id="rePassword"
+          type={showRePassword ? "text" : "password"}
+          placeholder="password"
+          sx={{ m: 1, width: "25ch" }}
+          onChange={(event)=>{handleRegister(event,"rePassWord")}}
+          InputProps={{
+            endAdornment: (
+              <span
+                onClick={()=>{setShowRePassword(!showRePassword)}}
+                onMouseDown={handleMouseDownPassword}
+              >
+                <RemoveRedEyeOutlinedIcon />
+              </span>
+            ),
+          }}
+        />
+
         <FormControl>
           <Button
             variant="contained"
@@ -78,26 +91,13 @@ function UserLogin() {
             disableRipple
           >
             {" "}
-            Log in
+            Reset Password
           </Button>
         </FormControl>
-        <div className="orElement">
-          <hr /> or <hr />{" "}
-        </div>
-        <FormControl>
-          <Button
-            variant="contained"
-            sx={{ m: 1, width: "25ch", textTransform: "none" , backgroundColor: "rgb(87,164,248)" }}
-            disableRipple
-          >
-            {" "}
-            Register
-          </Button>
-        </FormControl>
-        <span className="forgotPassword" >Forgotten your password?</span>
+
       </div>
     </div>
   );
 }
 
-export default UserLogin;
+export default PasswordReset;

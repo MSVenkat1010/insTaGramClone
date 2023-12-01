@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import StoryView from "./timeline/StoryView/StoryView.js";
 import UserLogin from "./userLogin/UserLogin"
 import Register from "./userLogin/Register/Register.js";
+import PasswordReset from "./userLogin/PasswordReset/PasswordReset.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,6 +19,7 @@ root.render(
         <Route path="/stories" element={<StoryView />} />
         <Route path="/login" element={<UserLogin/>} />
         <Route path="/register" element={<Register/>} />
+        <Route path="/passReset" element={<PasswordReset/>} />
       </Routes>
     </BrowserRouter>
 </React.StrictMode>
