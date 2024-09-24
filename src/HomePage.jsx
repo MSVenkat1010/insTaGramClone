@@ -6,10 +6,10 @@ function HomePage() {
   return (
     <div className="homepage">
       <div className="homepage__navWraper">
-        <SideNav />
+         <SideNav /> 
       </div>
       <div className="homepage__timeline">
-        <TimeLine />
+       <TimeLine /> 
       </div>
     </div>
   );

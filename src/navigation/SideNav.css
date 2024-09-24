@@ -1,12 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .margin-5-25{
+    @apply mt-[5px] mr-[25px] mb-[5px] ml-[25px]
+  }
+  .margin-5-10{
+   @apply mt-[5px] mr-[10px] mb-[5px] ml-[10px]
+  }
+
+  .padding-5-10-15{
+    @apply pt-[5px] pr-[15px] pb-[10px] pl-[15px]
+  }
+  .sideNav_borderRight{
+    border-right: 1px solid rgb(20,20,20);
+  }
+}
 .sideNav {
-  display: flex;
-  flex-direction: column;
   position: fixed;
-  height: 100%;
-  justify-content: space-between;
-  z-index: 1;
-  border-right: 1px solid rgb(20,20,20);
-  background-color: black;
+  @apply flex md:flex-col md:h-[100%] md:bottom-auto bottom-0  md:sideNav_borderRight z-[1] justify-between bg-black md:w-auto w-[100%];
   
 }
 .sidenav__logo {
@@ -14,25 +27,13 @@
   margin: 25px;
 }
 .sideNav_Buttons {
-  display: flex;
-  margin: 5px 25px 25px 5px;
-  flex-direction: column;
+  @apply flex md:flex-col margin-5-25 bottom-0 relative z-10 md:w-auto w-[100%] justify-between p-4
 }
 .sideNav_ButtonsMore {
-    display: flex;
     margin: 5px 25px 25px 5px;
-    flex-direction: column;
   }
 .sideNav_Button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background: 0;
-  color: whitesmoke;
-  border: 0;
-  margin: 5px 10px 5px 10px;
-  padding: 5px 15px 10px 15px;
-  border-radius: 10px;
+  @apply flex items-center border-0 bg-transparent rounded-[10px] text-white md:margin-5-10 md:padding-5-10-15;
 }
 .sideNav_Button:hover {
   cursor: pointer;

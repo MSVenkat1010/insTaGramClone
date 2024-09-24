@@ -26,7 +26,7 @@ function Register() {
 
 
   const handleMouseDownPassword = (
-    event: React.MouseEvent<HTMLButtonElement>
+    event
   ) => {
     event.preventDefault();
   };

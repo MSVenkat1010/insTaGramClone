@@ -4,9 +4,9 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-import StoryView from "./timeline/StoryView/StoryView.js";
+import StoryView from "./timeline/StoryView/StoryView.jsx";
 import UserLogin from "./userLogin/UserLogin"
-import Register from "./userLogin/Register/Register.js";
+import Register from "./userLogin/Register/Register.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

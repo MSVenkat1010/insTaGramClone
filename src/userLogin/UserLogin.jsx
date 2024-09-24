@@ -25,7 +25,7 @@ function UserLogin() {
  
 
   const handleMouseDownPassword = (
-    event: React.MouseEvent<HTMLButtonElement>
+    event
   ) => {
     event.preventDefault();
   };
